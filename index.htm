@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figures geometrics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <figure class="header__container-img">
+            <img class="header__logo" src="./assets/bot.png" alt="" srcset="">
+        </figure>
+        <h1 class="header__title">Figuras Geometricas</h1>
+        <nav>
+            <ul class="header__nav-container">
+                <li class="header__nav--li"><a href="#Geometry">Areas y perimetros</a></li>
+                <li class="header__nav--li"><a href="#precies">Precios y descuentos</a></li>
+                <li class="header__nav--li"><a href="#average">Promedio, moda y mediana</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Geometry" class="main__geometry">
+            <h2 class="main__title">Geometry</h2>
+            <section class="main__cuadrado section__geometry">
+                <p class="title__geometry">
+                    <img src="./assets/detener (1).svg" alt=""> 
+                    Square
+                </p>
+                <p class="question__geometry">How long is each side of your square?</p>
+                <div>
+                    <input type="number" id="inputSquare" class="input__geometry input__square">
+                    <select name="measures" id="measuresSquare" class="measures__geometry measures__square">
+                        <option>cm</option>
+                        <option>mm</option>
+                        <option>m</option>
+                    </select>
+                </div>
+                <div>
+                    <button onclick="calculatePerimeterSquare()" class="button__geometry button__square">
+                        Get perimeter
+                    </button>
+                    <button onclick="calculateAreaSquare()" class="button__geometry button__square">
+                        Get area
+                    </button>
+                </div>
+                <div class="outCome">
+                    <div id="outCome__square" class="outCome__align">
+                        
+                    </div>
+                    <div id="measureSquare">
+                    </div>
+                </div>
+            </section>
+            <section class="main__triangulo section__geometry">
+                <p class="title__geometry">
+                    <img src="./assets/blanqueador (1).svg" alt="">
+                    Triangle
+                </p>
+                <p class="question__geometry">What are the measurements of your triangle?</p>
+                <p>Base</p>
+                <input type="number" name="" id="input__base" class="input__geometry input__triangle">
+                <p>Side 1</p>
+                <input type="number" name="" id="input__side1"  class="input__geometry input__triangle">
+                <p>Side 2</p>
+                <input type="number" name="" id="input__side2"  class="input__geometry input__triangle">
+                <p>height</p>
+                <input type="number" name="" id="input__height"  class="input__geometry input__triangle">
+                <select name="measures" class="measures__geometry measures__triangle" id="measuresTriangle">
+                    <option>cm</option>
+                    <option>mm</option>
+                    <option>m</option>
+                </select>
+                <div>
+                    <button onclick="calculateHeightTriangle()" class="button__geometry button__triangle" >
+                        Get height
+                    </button>
+                    <button onclick="calculatePerimeterTriangle()" class="button__geometry button__triangle">
+                        Get perimeter
+                    </button>
+                    <button onclick="calculateAreaTriangle()" class="button__geometry button__triangle">
+                        Get area
+                    </button>
+                </div>
+                <div class="outCome" >
+                    <div id="outCome__triangle" class="outCome__align">
+                        
+                    </div>
+                    <div id="measureTriangle">
+                    </div>
+                </div>
+            </section>
+            <section class="main__circulo section__geometry">
+                <p class="title__geometry">
+                    <img src="./assets/lavado-en-seco.svg" alt=""> 
+                    Circle
+                </p>
+                <p class="question__geometry">What is the radio of your circle?</p>
+                <input type="number" name="" id="input__radio" class="input__geometry input__circle">
+                <select name="measures" class="measures__geometry measures__circle" id="measuresCircle">
+                    <option>cm</option>
+                    <option>mm</option>
+                    <option>m</option>
+                </select>
+                <div>
+                    <button onclick="calculatePerimeterCircle()" class="button__geometry button__circle">
+                        Get perimeter
+                    </button>
+                    <button onclick="calculateAreaCircle()" class="button__geometry button__circle">
+                        Get area
+                    </button>
+                </div>
+                <div class="outCome"  >
+                    <div id="outCome__circle" class="outCome__align">
+                        
+                    </div>
+                    <div id="measureCircle">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="precies" class="main__discount">
+            <h2 class="discount__title">percentage and Discount</h2>
+            <section class="card product__burger">
+                <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2019/05/hamburguesas-para-el-dia-del-padre-caseras.jpg" alt="">
+                <p class="product__title">hawaiian burger</p>
+                <div class="burger__alert--discount display__none">
+                </div>
+                <div>
+                    <del class="product__burger--none product__burger--discount">$ 150</del>
+                </div>
+                <div id="price__burger--container">
+                    <p class="product__price">$150</p>
+                </div>
+                <div class="coupuns">
+                    <input id="InputCouponburger" type="text">
+                    <button onclick="onClickButtonPriceDiscount(150, 'burger')">
+                        apply coupon
+                    </button>
+                </div>
+                <p class="coupon__applied--burger display__none">coupon applied</p>
+            </section>
+            <section class="card product__pizza">
+                <img src="https://www.saborusa.com/wp-content/uploads/2019/10/Animate-a-disfrutar-una-deliciosa-pizza-de-salchicha-Foto-destacada.png" alt="">
+                <p class="product__title">Family pack of pizzas</p>
+                <div class="pizza__alert--discount display__none"></div>
+                <div>
+                    <del class="product__pizza--none product__pizza--discount">$ 300</del>
+                </div>
+                <div id="price__pizza--container">
+                    <p class="product__price">$300</p>
+                </div>
+                <div class="coupuns">
+                    <input id="InputCouponpizza" type="text">
+                    <button onclick="onClickButtonPriceDiscount(300, 'pizza')">
+                        apply coupon
+                    </button>
+                </div>
+                <p class="coupon__applied--pizza display__none">coupon applied</p>
+            </section>
+            <section class="list__coupuns">
+                <h3>List from coupons</h3>
+                <ul>
+                    <li>first-buy</li>
+                    <li>Forever</li>
+                    <li>secret</li>
+                </ul>
+            </section>
+        </section>
+        <section id="average" class="main__average">
+            <h2>Calcula promedio, moda y mediana</h2>
+            <p>Usar una coma y luego un espacio para separar los numeros</p>
+            <form action="">
+                <input type="text" id="input-statistics" placeholder="Numeros">
+                <input type="button" class="btn" value="mode" onclick="calculateStatistics('mode')" >
+                <input type="button" class="btn" value="median" onclick="calculateStatistics('median')">
+                <input type="button" class="btn" value="average" onclick="calculateStatistics('average')">
+                <input type="button" value="median harmonica" class="btn" onclick="calculateStatistics('harmonica')">
+            </form>
+            <div class="outCome">
+                <div class="outCome__align" id="outcome__statistics">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a class="ancle__footer" href="https://github.com/">        
+            <figure>
+                <img src="./assets/github.png" alt="">
+            </figure>
+            <p>@jesus-bit</p>
+        </a>
+    </footer>
+    <script src="./figure.js"></script>
+</body>
+</html>

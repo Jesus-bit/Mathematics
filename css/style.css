@@ -1,0 +1,279 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 52.5%;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    font-size: 3rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo{
+    width: 100%;
+}
+.header__container-img{
+    width: 100px;
+}
+.header__nav-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    list-style: none;
+    width: 200px;
+    height: 100%;
+}
+.header__nav-container .header__nav--li:hover{
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+}
+.main__geometry{
+    display: grid;
+    grid-template: 70px auto auto / repeat(2, 48vw);
+    grid-gap: 10px 10px;
+}
+.main__title{
+    grid-row-start: 1;
+	grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    align-self: center;
+}
+.main__geometry .main__cuadrado{
+    background-color: rgb(1, 78, 0);
+    margin-left: 10px;
+}
+.main__geometry .main__circulo{
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 50%;
+    justify-self: center;
+    background-color: rgb(98, 98, 226);
+    margin-bottom: 10px;
+}
+.main__geometry .main__triangulo{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 82, 82);
+}
+.main__geometry .section__geometry{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    font-size: 2rem;
+}
+.title__geometry{
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.title__geometry img{
+    width: 20px;
+    margin-right: 4px;
+    color: white;
+}
+.question__geometry{
+    margin: 4px 0px 4px 0px;
+}
+.input__geometry.input__square, .measures__square{
+    background-color: rgb(2, 145, 0);
+}
+.input__geometry.input__circle, .measures__circle{
+    background-color: rgb(160, 160, 255);
+}
+.input__geometry.input__triangle, .measures__triangle{
+    background-color: rgb(250, 130, 130);
+}
+.input__geometry{
+    width: 70%;
+    color: white;
+    border-radius: 5px;
+    margin: 0 0 8px 0;
+    border-style: none;
+    outline: none;
+    padding: 2px;
+}
+.measures__geometry{
+    width: 30%;
+    color: white;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.button__geometry{
+    background-color: white;
+    width: 100px;
+    border-radius: 7px;
+    border: none;
+    margin: 5px;
+    height: 30px;
+    font-weight: 700;
+}
+.button__geometry.button__square{
+    color: rgb(1, 78, 0);
+}
+.button__geometry.button__triangle{
+    color: rgb(255, 82, 82);
+}
+.button__geometry.button__circle{
+    color: rgb(98, 98, 226);
+}
+.outCome{
+    border-radius: 15px;
+    border: 2px solid white;
+    padding: 8px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.outCome .outCome__align{
+    align-self: flex-end;
+    margin-right: 2px;
+}
+.squared{
+    vertical-align: 5px;
+}
+.main__discount{
+    display: grid;
+    grid-template: auto auto / repeat(3, 31vw);
+    grid-gap: 15px 15px;
+}
+.discount__title{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    align-self: center;
+    margin: 8px;
+}
+.card{
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+.list__coupuns{
+    text-align: end;
+    font-size: 2rem;
+}
+.list__coupuns ul li {
+    list-style: none;
+}
+.list__coupuns h3{
+    margin-bottom: 4px;
+}
+.product__title{
+    margin: 5px;
+    font-size: 2rem;
+}
+.product__burger--none, .product__pizza--none{
+    display: none;
+}
+.product__price{
+    font-size: 2rem;
+    margin-bottom: 4px;
+}
+.product__burger{
+    margin-left: 10px;
+}
+.coupuns{
+    display: flex;
+    margin: 0 4px 10px 4px;
+}
+.coupuns input{
+    font-size: 2rem;
+    border: 1px green solid;
+    border-radius: 4px;
+    padding: 4px;
+}
+.coupuns button{
+    font-size: 2rem;
+    all: unset;
+    color: white;
+    background-color: green;
+    border-radius: 4px;
+    padding: 4px;
+}
+.burger__alert--discount, .pizza__alert--discount{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+}
+.display__none{
+    display: none;
+}
+.coupon__applied--pizza, .coupon__applied--burger{
+    font-size: 2rem;
+}
+.main__average{
+    color: white;
+    width: 100%;
+    background-color: blueviolet;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input#input-statistics{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px white solid;
+    padding: 10px;
+    margin: 6px;
+    color: white;
+    outline: none;
+}
+input#input-statistics::placeholder{
+    opacity: 1;
+    color: white;
+}
+input[type="button"].btn{
+    background-color: rgb(167, 77, 252);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+footer{
+    background-color: black;
+    color: white;
+    padding: 40px;
+}
+.ancle__footer {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ancle__footer figure{
+    width: 50px;
+}
+.ancle__footer img{
+    width: 100%;
+}
